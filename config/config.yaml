@@ -1,0 +1,30 @@
+data_generation:
+  n_users: 1000
+  n_guilds: 50
+  seed: 42
+
+preprocessing:
+  user_features:
+    - level
+    - play_time
+    - pvp_ratio
+    - social_activity
+    - login_frequency
+  guild_features:
+    - avg_level
+    - size
+    - pvp_focus
+    - activity_rate
+    - min_level_req
+
+recommendation:
+  similarity_features:
+    user:
+      - level
+      - pvp_ratio
+      - social_activity
+    guild:
+      - avg_level
+      - pvp_focus
+      - activity_rate
+  top_n: 5
